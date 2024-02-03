@@ -1,0 +1,58 @@
+.signup_card {
+    width: 400px;
+    padding: 2rem;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.signup_card .signup_title {
+    text-align: center;
+    font-weight: 500;
+    font-size: 25px;
+}
+.signup_card .have_ac a{
+   text-decoration: none;
+}
+.signup_card .have_ac p{
+   font-size: 14px;
+}
+
+.signup_card .error_display{
+    text-align: center;
+    color: #ff0000;
+    
+}
+.signup_card form{
+    margin-top:1.5rem ;
+}
+
+.signup_card .input {
+    margin: 10px 0px;
+}
+
+.signup_card .signup_btn {
+    width: 100%;
+    background-color: #16161d;
+    border: 0 ;
+    color: #fff;
+    padding: 1rem;
+    margin-top: 10px;
+}
+
+.signup_card .signup_btn:disabled{
+    opacity: 0.7;
+}
+
+.signup_card .google_signup_btn{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    border: 1px solid #16161d ;
+    color: #16161d;
+    padding: 1rem;
+    margin-top: 10px;
+}
+.signup_card .google_signup_btn img{
+    width: 30px;
+}

@@ -1,0 +1,101 @@
+.product_slider .slider_title {
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-left: 10px;
+}
+
+.product_slider {
+    position: relative;
+    margin: 3rem 0rem;
+}
+
+.slider {
+    overflow: hidden;
+}
+
+.products {
+    display: flex;
+    scroll-behavior: smooth;
+    scroll-snap-type: x;
+    scroll-snap-stop: always;
+    overflow-x: hidden;
+}
+
+.product_card {
+    margin-right: 10px;
+    scroll-snap-align: start;
+}
+
+.product_slider .prev_btn,
+.product_slider .next_btn {
+    position: absolute;
+    top: 0;
+    font-size: 3rem;
+    color: #16161d;
+    width: 50px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    margin-top: 35px;
+}
+
+.product_slider .prev_btn svg,
+.product_slider .next_btn svg {
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    border-radius: 50%;
+    background-color: #fff;
+}
+
+.product_slider .prev_btn {
+    left: 15px;
+}
+
+.product_slider .next_btn {
+    right: 15px;
+}
+
+.explore_card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 250px;
+    background-color: #F6F6F6;
+    border: 0;
+    padding: 1rem;
+    scroll-snap-align: start;
+}
+
+.explore_card .explore_content{
+    height: fit-content;
+}
+
+.explore_card .explore_content .explore_title {
+    font-weight: 600;
+    text-align: center;
+}
+
+.explore_card .explore_content .explore_actions {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.explore_card .explore_content .explore_actions .explore_btn {
+    width: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 1px;
+    border: 1px solid #16161d;
+    transition: all 250ms ease-out;
+}
+
+.explore_card .explore_actions a {
+    color: #16161d;
+    text-decoration: none;
+}
+
+.explore_card .explore_actions .explore_btn:hover {
+    color: #fff;
+    background-color: #16161d;
+}

@@ -1,0 +1,46 @@
+.banner {
+    width: 100%;
+    background-position: center;
+    background-image: url("../../assets/images/banner1.jpg");
+}
+
+.banner .overlay {
+    width: 100%;
+    height: 100%;
+    color: #ffff;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 3rem 2rem;
+}
+
+.banner .banner_content {
+    width: fit-content;
+    max-width: 850px;
+}
+
+.banner .banner_content h2 {
+    font-size: 5rem;
+    font-weight: 700;
+}
+
+.banner .banner_content a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.banner .banner_content .banner_btn {
+    width: 150px;
+    padding: 10px 1px;
+    font-weight: 600;
+    display: flex;
+    color: #fff;
+    font-weight: 300;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #fff;
+    transition: all 300ms ease-out;
+}
+
+.banner .banner_content .banner_btn:hover {
+    color: #16161d;
+    background-color: #fff;
+}

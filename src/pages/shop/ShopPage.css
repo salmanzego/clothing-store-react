@@ -1,0 +1,16 @@
+.shop_wrapper{
+    min-height: 90vh;
+}
+.tool_panel{
+    width: 100%;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.tool_panel .row{
+    width: 100%;
+}
+.tool_panel svg{
+    cursor: pointer;
+}
