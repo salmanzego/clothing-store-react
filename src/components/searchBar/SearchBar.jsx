@@ -1,13 +1,13 @@
 import './SearchBar.css'
 
-const SearchBar = ({query, setQuery}) => {
-    
+const SearchBar = ({ state, setState }) => {
+
     const handleSearch = (event) => {
-        setQuery(event.target.value);
+        setState(prev => { return { ...prev, query: event.target.value } });
     }
     return (
         <div className="search_bar">
-            <input type="search" name="" id="" placeholder="search" value={query} onInput={(e)=>{handleSearch(e)}} />
+            <input type="search" name="" id="" placeholder="search" value={state.query} onInput={(e) => { handleSearch(e) }} />
         </div>
     )
 }

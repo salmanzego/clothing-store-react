@@ -15,10 +15,12 @@ export const submitForm = async (data, endpoint) => {
         headers: headers,
         body: JSON.stringify(data)
     }).then(res => {
+        console.log(res);
         statusCode = res.status;
         return res.json();
     }).then(data => {
         data = {...data, status: statusCode}
+        console.log(data);
         return data;
     }).catch(err => {
         err = {...err, status: statusCode}

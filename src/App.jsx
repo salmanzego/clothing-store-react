@@ -4,12 +4,8 @@ import Test from './pages/Test';
 import LoginPage from './pages/login/LoginPage';
 import SignUpPage from './pages/signup/SignUpPage';
 import ShopPage from './pages/shop/ShopPage';
+import Cart from './pages/cart/Cart';
 import { Routes, Route } from "react-router-dom";
-import { library } from '@fortawesome/fontawesome-svg-core';
-
-import { fab } from '@fortawesome/free-brands-svg-icons'
-import { fas } from '@fortawesome/free-solid-svg-icons'
-import { far } from '@fortawesome/free-regular-svg-icons'
 
 function App() {
   return (
@@ -23,9 +19,9 @@ function App() {
       <Route path="/login" element={<LoginPage />} />
       <Route path="/signup" element={<SignUpPage />} />
       <Route path="/shop" element={<ShopPage />} />
+      <Route path="/cart" element={<Cart />} />
     </Routes>
   );
 }
 
 export default App;
-library.add(fab, fas, far);

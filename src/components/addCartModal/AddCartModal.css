@@ -1,0 +1,76 @@
+.addcart_modal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: auto;
+    max-width: 500px;
+    max-height: 300px;
+    padding: 5rem 2rem;
+    background-color: #fff;
+    border: 2px solid black;
+}
+
+.addcart_modal .size_list {
+    display: flex;
+    gap: 1rem;
+}
+
+.addcart_modal .size {
+    min-width: 50px;
+    border: 2px solid black;
+    padding: 0.5rem;
+    text-align: center;
+    transition: all 250ms ease-out;
+}
+
+.addcart_modal input[type="radio"]:checked + .size{
+    background-color: #16161d;
+    color: #fff;
+}
+
+.addcart_modal .size:hover {
+    background-color: #16161d;
+    color: #fff;
+}
+
+.addcart_modal .quantity{
+    display: flex;
+    align-items: center;
+}
+
+.addcart_modal .quantity button{
+    padding: 0.2rem;
+    border: 2px solid #16161d;
+    background-color: #F6F6F6;
+    transition: all 300ms ease-out;
+}
+
+.addcart_modal .quantity .count {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    padding: 0.2rem;
+    margin: 0px 10px;
+    border: 2px solid #16161d;
+}
+
+.save_btn{
+    width: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 1px;
+    margin-top:3rem ;
+    border: 1px solid #16161d;
+    transition: all 250ms ease-out;
+}
+
+.save_btn:hover{
+    color: #fff;
+    background-color: #16161d;
+}

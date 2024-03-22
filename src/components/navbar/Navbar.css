@@ -50,6 +50,8 @@ nav .nav_menu a:hover {
 
 nav .nav_actions {
     display: flex;
+    gap: 1rem;
+    align-items: center;
     justify-content: flex-end;
 }
 
@@ -80,6 +82,27 @@ nav .hamburger {
     align-items: center;
 }
 
+nav .cart_btn{
+    position: relative;
+}
+
+nav .cart_btn .cart_count{
+    width: 15px;
+    height: 15px;
+    display: flex;
+    font-size: 12px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    padding: 9px;
+    position: absolute;
+    right: -2px;
+    top: -5px;
+    background-color: #16161d;
+    color: #fff;
+    box-sizing: border-box;
+
+}
 
 .sidebar_toggle {
     width: 32px;

@@ -1,0 +1,26 @@
+.cart_actions{
+    display: flex;
+    justify-content: flex-end;
+    padding: 1rem 0rem;
+}
+
+.cart_actions .total_price p{
+    font-size: 30px;
+}
+
+.cart_actions .total_price span{
+    font-weight: bold;
+}
+
+.cart_actions .confirm_btn {
+    width: 150px;
+    padding: 5px 1px;
+    display: flex;
+    color: #fff;
+    font-weight: 300;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #16161d;
+    background-color: #16161d;
+    transition: all 300ms ease-out;
+}

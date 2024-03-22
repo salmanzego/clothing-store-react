@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import Box from '@mui/material/Box';
 import Slider from '@mui/material/Slider';
 
@@ -29,8 +28,8 @@ const marks = [
     },
 ];
 
-export default function RangeSlider() {
-    const [value, setValue] = useState([0, 499]);
+export default function RangeSlider({ value, setValue }) {
+
 
     const handleChange = (event, newValue) => {
         setValue(newValue);

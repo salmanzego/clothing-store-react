@@ -6,21 +6,37 @@ import { submitForm } from '../../utils/submitForm';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useNavigate } from 'react-router-dom';
 import google_logo from '../../assets/images/google_logo.png';
+import { jwtDecode } from 'jwt-decode';
+import { useContext } from 'react';
+import { UserContext } from '../../context/UserProvider';
 
 const Login = () => {
     const methods = useForm();
     const navigate = useNavigate();
     const [errMsg, setErrMsg] = useState('');
-    const submitFn = async (data,url) => {
+    const { setUser } = useContext(UserContext);
+    const submitFn = async (data, url) => {
         document.getElementById('login_btn').disabled = true;
-        const response = await submitForm(data,url);
+        const response = await submitForm(data, url);
         if (response.status === 404) {
             setErrMsg(response.msg);
             document.getElementById('login_btn').disabled = false;
         } else if (response.status === 302) {
+            //console.log(response);
+            const userData = response.user;
+            localStorage.setItem('userId', userData._id);
+            localStorage.setItem('userName', userData.userName);
+            localStorage.setItem('userEmail', userData.email);
+            setUser({
+                _id: userData._id,
+                email: userData.email,
+                userName: userData.userName
+            });
             navigate(response.redirectTo);
         }
     }
+
+    
 
     const emailValidation = {
         required: {
@@ -62,9 +78,9 @@ const Login = () => {
                         <button type="submit" className='login_btn' id='login_btn' onClick={methods.handleSubmit(data => submitFn(data, '/login'))}>Login</button>
                     </div>
 
-                    <div className="row">
-                        <button className='google_login_btn'><img src={google_logo} alt="" />Login with Google</button>
-                    </div>
+                    {false && <div className="row">
+                        <button className='google_login_btn' ><img src={google_logo} alt="" />Login with Google</button>
+                    </div>}
                 </form>
             </div>
         </FormProvider>
